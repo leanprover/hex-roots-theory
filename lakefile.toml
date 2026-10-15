@@ -1,5 +1,5 @@
-name = "hex-roots-mathlib"
-defaultTargets = ["HexRootsMathlib"]
+name = "hex-roots-theory"
+defaultTargets = ["HexRootsTheory"]
 
 leanOptions = [
   { name = "doc.verso", value = true },
@@ -7,14 +7,14 @@ leanOptions = [
 ]
 
 [[require]]
-name = "HexPolyZMathlib"
-git = "https://github.com/leanprover/hex-poly-z-mathlib.git"
-rev = "v0.9.0"
+name = "HexPolyZTheory"
+git = "https://github.com/leanprover/hex-poly-z-theory.git"
+rev = "v0.10.0"
 
 [[require]]
 name = "HexRoots"
 git = "https://github.com/leanprover/hex-roots.git"
-rev = "v0.9.0"
+rev = "v0.10.0"
 
 [[require]]
 name = "mathlib"
@@ -22,8 +22,8 @@ git = "https://github.com/leanprover-community/mathlib4.git"
 rev = "6b7abb3c7686292736be2955bd3eb9ebf63b456a"
 
 [[lean_lib]]
-name = "HexRootsMathlib"
+name = "HexRootsTheory"
 
 [[lean_lib]]
-name = "HexRootsMathlibTests"
-globs = ["HexRootsMathlib.Examples"]
+name = "HexRootsTheoryTests"
+globs = ["HexRootsTheory.Examples"]

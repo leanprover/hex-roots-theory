@@ -1,4 +1,4 @@
-# hex-roots-mathlib
+# hex-roots-theory
 
 Part of [`hex`](https://github.com/kim-em/hex-dev), a computer algebra
 library for Lean 4. The aim is fast executable code, fully verified, built
@@ -16,22 +16,22 @@ and termination of the production driver on every nonzero squarefree input.
 
 ```toml
 [[require]]
-name = "hex-roots-mathlib"
-git = "https://github.com/leanprover/hex-roots-mathlib.git"
+name = "hex-roots-theory"
+git = "https://github.com/leanprover/hex-roots-theory.git"
 rev = "main"
 ```
 
 ```lean
-import HexRootsMathlib
+import HexRootsTheory
 ```
 
 # Functionality
 
-`HexRootsMathlib.isolateComplexRoots` removes the executable `Option` when the caller has
+`HexRootsTheory.isolateComplexRoots` removes the executable `Option` when the caller has
 the hypotheses required by completeness:
 
 ```lean
-open Hex HexRootsMathlib
+open Hex HexRootsTheory
 
 def p : ZPoly := DensePoly.ofCoeffs #[-1, -1, 0, 1]
 
@@ -69,7 +69,7 @@ This avoids a general meromorphic or contour-winding API while proving exactly
 what the executable certificates need. The computational library remains
 Mathlib-free; analytic and algebraic semantics live here.
 
-See the [SPEC](SPEC/hex-roots-mathlib.md) and the Hex manual's complex-roots
+See the [SPEC](SPEC/hex-roots-theory.md) and the Hex manual's complex-roots
 chapter for the theorem chain and a complete `x³ - x - 1` example.
 
 # Contributing
